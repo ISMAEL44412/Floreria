@@ -9,8 +9,10 @@
 
 .titulo {
     font-family: v.$cursiva;
-    font-size: 3rem;
+    font-size: 4rem;
     color: v.$rosa-principal;
+    padding: 3rem 0;
+    margin: 0;
 }
 
 .titulo__h3 {
@@ -38,12 +40,14 @@
         padding-bottom: 2rem;
         transition: transform 1s;
         transition: box-shadow .3s;
-
+        transition: color .3s;
         &:hover {
             box-shadow: 0 0 8rem v.$rosa-principal;
             border: .5px solid v.$rosa-principal;
             transform: translateY(-.5rem);
             cursor: pointer;
+            background-color: v.$rosa-principal;
+            color: v.$blanco;
         }
 
         display: flex;

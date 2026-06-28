@@ -1,0 +1,79 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: .5rem;
+    padding: 2rem 0;
+
+    @include m.tablet {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 2rem;
+    }
+
+    .galeria__imagen {
+        border-radius: 2rem;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            cursor: pointer;
+            border: .3rem solid v.$rosa-principal;
+        }
+    }
+
+    .uno, .cuatro {
+        grid-column: 1 / 3;
+    }
+    .uno, .siete {
+        grid-row: 1 / 3;
+    }
+
+    .cuatro, .cinco {
+        grid-row: 3/ 4;
+    }
+    .cinco {
+        grid-column: 3 / 5;
+    }
+
+    .seis {
+        grid-column: 5 / 7;
+    }
+
+    .siete {
+
+        grid-column: 4 / 7;
+    }
+
+    @include m.tablet {
+
+        .uno,
+        .tres,
+        .siete {
+            grid-row: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .uno {
+            grid-column: 1 / 3;
+        }
+
+        .tres {
+            grid-column: 4 / 6;
+        }
+
+        .siete {
+            grid-column: 7 /9;
+        }
+
+        .cuatro, .cinco, .seis {
+            grid-column: unset;
+            grid-row: unset;
+        }
+    }
+
+}
