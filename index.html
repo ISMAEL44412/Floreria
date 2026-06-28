@@ -7,6 +7,7 @@
     <title>Flores Eternas</title>
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="shortcut icon" href="img/flor.png" type="image/x-icon">
+    <link rel="preload" href="build/css/app.css" as="style" />
     <!-- * Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +20,7 @@
     <header class="header">
         <nav class="navegacion  contenedor">
             <div class="navegacion__logo">
-                <img class="navegacion__imagen" src="img/logo_sin_background.png" alt="">
+                <img loading="lazy" class="navegacion__imagen" src="img_webp/logo_sin_background.webp" alt="">
             </div>
             <div class="navegacion__enlaces">
                 <a class="enlace activo" href="index.html">Inicio</a>
@@ -27,8 +28,9 @@
                 <a class="enlace" href="catalogo.html">Catálogo</a>
                 <a class="enlace" href="#trabajos-destacados">Trabajos</a>
                 <a class="enlace" href="#galeria">Galeria</a>
-                
-                <a class="enlace__contactame boton" href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
+
+                <a class="enlace__contactame boton"
+                    href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
                     <i class="fa-brands fa-whatsapp"></i>
                     Escribeme
                 </a>
@@ -51,21 +53,22 @@
                 <p class="hero__parrafo">Arreglos y detalles personalizados <br>para cada ocacion especial.</p>
                 <div class="hero__acciones">
                     <a class="acciones__catalogo" href="#">Catalogo <i class="fa-solid fa-clover"></i></i></a>
-                    <a class="acciones__contactame" href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
+                    <a class="acciones__contactame"
+                        href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
                         <i class="fa-brands fa-whatsapp"></i>
                         Contactar
                     </a>
                 </div>
             </div>
             <div class="hero__imagen">
-                <img src="img/hero_completo_sin_logo.png" alt="Hero imagen">
+                <img loading="lazy" src="img_webp/hero_completo_sin_logo.webp" alt="Hero imagen">
             </div>
         </section>
         <section id="sobre-mi" class="perfil">
             <h2 class="titulo__seccion">Sobre mí</h2>
             <div class="perfil__contenedor contenedor">
                 <div class="perfil__imagen">
-                    <img src="img/perfil.png" alt="Chica sonriendo con flor de cinta">
+                    <img loading="lazy" src="img_webp/perfil.webp" alt="Chica sonriendo con flor de cinta">
                 </div>
                 <div class="perfil__info">
                     <h2>Hola, soy <span>Juli <i class="fa-regular fa-heart"></i></span></h2>
@@ -77,19 +80,19 @@
                 </div>
                 <div class="perfil__detalles">
                     <div class="perfil__detalle">
-                        <img class="perfil__detalles-icono" src="img/corazon.png" alt="">
+                        <img loading="lazy" class="perfil__detalles-icono" src="img_webp/corazon.webp" alt="">
                         <p>Hecho a mano</p>
                     </div>
                     <div class="perfil__detalle">
-                        <img class="perfil__detalles-icono" src="img/flor.png" alt="">
+                        <img loading="lazy" class="perfil__detalles-icono" src="img_webp/flor.webp" alt="">
                         <p>Personalizado</p>
                     </div>
                     <div class="perfil__detalle">
-                        <img class="perfil__detalles-icono" src="img/regalo2.png" alt="">
+                        <img loading="lazy" class="perfil__detalles-icono" src="img_webp/regalo2.webp" alt="">
                         <p>Ideal para regalos y eventos</p>
                     </div>
                     <div class="perfil__detalle">
-                        <img class="perfil__detalles-icono" src="img/hojas-de-coca.png" alt="">
+                        <img loading="lazy" class="perfil__detalles-icono" src="img_webp/hojas-de-coca.webp" alt="">
                         <p>Materiales de alta calidad</p>
                     </div>
                 </div>
@@ -103,26 +106,29 @@
                 <div class="catalogo">
                     <div class="catalogo__producto">
                         <div class="contenedor__imagen">
-                            <img class="catalogo__producto__imagen" src="img_flores/arg_ramo.png" alt="producto">
+                            <img loading="lazy" class="catalogo__producto__imagen" src="img_flores/arg_ramo.png"
+                                alt="producto">
                         </div>
                         <h4>Ramo Seleccion Argentina</h4>
                     </div>
                     <div class="catalogo__producto">
-                        <img class="catalogo__producto__imagen" src="img_flores/cr7.jpg" alt="producto">
+                        <img loading="lazy" class="catalogo__producto__imagen" src="img_flores_webp/cr7.webp"
+                            alt="producto">
                         <h4>Ramo cr7</h4>
                     </div>
                     <div class="catalogo__producto">
-                        <img class="catalogo__producto__imagen" src="img_flores/spiderman.jpg" alt="producto">
+                        <img loading="lazy" class="catalogo__producto__imagen" src="img_flores_webp/spiderman.webp"
+                            alt="producto">
                         <h4>Ramo de Spiderman</h4>
                     </div>
                     <div class="catalogo__producto">
-                        <img class="catalogo__producto__imagen" src="img_flores/princesa_sapo.jpg" alt="producto">
+                        <img loading="lazy" class="catalogo__producto__imagen" src="img_flores_webp/princesa_sapo.webp"
+                            alt="producto">
                         <h4>Ramo princesa y sapo</h4>
                     </div>
                 </div>
                 <div class="ver__catalogo">
-                    <a class="catalogo__boton" href="catalogo.html">Ver Catalogo completo <img
-                            class="catalogo__boton__img" src="img/flor.png" alt="Logo de flor"></i>
+                    <a class="catalogo__boton" href="catalogo.html">Ver Catalogo completo <img loading="lazy" class="catalogo__boton__img" src="img_webp/flor.webp" alt="Logo de flor"></i>
                     </a>
 
                 </div>
@@ -131,13 +137,13 @@
             <section id="galeria" class="contenedor ">
                 <h2 class="titulo__seccion">Galeria de imagenes</h2>
                 <div class="galeria">
-                    <img src="img_flores/ramo_rosado.jpg" alt="galeria-imagen" class="galeria__imagen uno">
-                    <img src="img_flores/arg_ramo.png" alt="galeria-imagen" class="galeria__imagen dos">
-                    <img src="img_flores/cr7.jpg" alt="galeria-imagen" class="galeria__imagen tres">
-                    <img src="img_flores/ramo_morado.jpg" alt="galeria-imagen" class="galeria__imagen cuatro">
-                    <img src="img_flores/spiderman.jpg" alt="galeria-imagen" class="galeria__imagen cinco">
-                    <img src="img_flores/boca.jpg" alt="galeria-imagen" class="galeria__imagen seis">
-                    <img src="img_flores/egresado.jpg" alt="galeria-imagen" class="galeria__imagen siete">
+                    <img loading="lazy" src="img_flores_webp/ramo_rosado.webp" alt="galeria-imagen" class="galeria__imagen uno">
+                    <img loading="lazy" src="img_flores_webp/arg_ramo.webp" alt="galeria-imagen" class="galeria__imagen dos">
+                    <img loading="lazy" src="img_flores_webp/cr7.webp" alt="galeria-imagen" class="galeria__imagen tres">
+                    <img loading="lazy" src="img_flores_webp/ramo_morado.webp" alt="galeria-imagen" class="galeria__imagen cuatro">
+                    <img loading="lazy" src="img_flores_webp/spiderman.webp" alt="galeria-imagen" class="galeria__imagen cinco">
+                    <img loading="lazy" src="img_flores_webp/boca.webp" alt="galeria-imagen" class="galeria__imagen seis">
+                    <img loading="lazy" src="img_flores_webp/egresado.webp" alt="galeria-imagen" class="galeria__imagen siete">
                 </div>
             </section>
         </div>
@@ -154,20 +160,21 @@
                 <h2>Conéctate conmigo</h2>
                 <div class="contactame__redes">
                     <div class="red">
-                        <a href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos." class="footer__enlace">
-                            <img class="footer__icono" src="img/whatsapp.png" alt="icono instagram">
+                        <a href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos."
+                            class="footer__enlace">
+                            <img loading="lazy" class="footer__icono" src="img_webp/whatsapp.webp" alt="icono WhatsApp">
                             WhatsApp <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                     <div class="red">
                         <a href="#" class="footer__enlace">
-                            <img  class="footer__icono" src="img/instagram.png" alt="icono instagram">
+                            <img loading="lazy" class="footer__icono" src="img_webp/instagram.webp" alt="icono instagram">
                             Instagram <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                     <div class="red">
                         <a href="https://www.facebook.com/julieta.martinez.499368" class="footer__enlace">
-                            <img  class="footer__icono" src="img/facebook.png" alt="icono instagram">
+                            <img loading="lazy" class="footer__icono" src="img_webp/facebook.webp" alt="icono facebook">
                             Facebook <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
