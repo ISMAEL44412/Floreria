@@ -954,6 +954,7 @@ trabajos realizados y galeria */
   display: flex;
   align-items: center;
   gap: 2rem;
+  color: #000;
 }
 .footer__enlace svg {
   margin-left: auto;
