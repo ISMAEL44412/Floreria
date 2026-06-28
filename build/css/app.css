@@ -353,6 +353,10 @@ img {
   margin: 0 auto;
 }
 
+.navegacion__enlaces .activo {
+  color: #E88C9A !important;
+}
+
 .header {
   background-color: #F8F1EB;
 }
@@ -390,10 +394,10 @@ img {
     gap: 0;
   }
 }
-.navegacion .navegacion__enlaces a:not(.boton) {
+.navegacion .navegacion__enlaces .enlace {
   color: #3A2A2A;
 }
-.navegacion .navegacion__enlaces a:not(.boton):hover {
+.navegacion .navegacion__enlaces .enlace:hover {
   color: rgb(223.5, 97.5, 116.6739130435);
 }
 
@@ -598,6 +602,12 @@ img {
   .perfil {
     height: 30rem;
   }
+}
+.perfil .perfil__titulo {
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+  font-family: "Playfair Display", serif;
 }
 .perfil .perfil__contenedor {
   display: grid;
