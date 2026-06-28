@@ -23,9 +23,9 @@
             </div>
             <div class="navegacion__enlaces">
                 <a class="enlace activo" href="index.html">Inicio</a>
-                <a class="enlace" href="#">Sobre mí</a>
+                <a class="enlace" href="#sobre-mi">Sobre mí</a>
                 <a class="enlace" href="catalogo.html">Catálogo</a>
-                <a class="enlace" href="#">Trabajos</a>
+                <a class="enlace" href="#trabajos-destacados">Trabajos</a>
                 <a class="enlace" href="#">Testimonios</a>
                 <a class="enlace__contactame boton" href="/contactame">
                     <i class="fa-brands fa-whatsapp"></i>
@@ -60,8 +60,8 @@
                 <img src="img/hero_completo_sin_logo.png" alt="Hero imagen">
             </div>
         </section>
-        <section class="perfil">
-            <h2 class="perfil__titulo">Sobre mí</h2>
+        <section id="sobre-mi" class="perfil">
+            <h2 class="titulo__seccion">Sobre mí</h2>
             <div class="perfil__contenedor contenedor">
                 <div class="perfil__imagen">
                     <img src="img/perfil.jpg" alt="Chica sonriendo con flor de cinta">
@@ -95,41 +95,53 @@
             </div>
         </section>
         <!-- * Catalogo -->
-
-        <section class="contenedor">
-            <h2 class="titulo">Catálogo <i class="fa-solid fa-heart"></i></h2>
-            <h3 class="titulo__h3">Trabajos destacados</h3>
-            <div class="catalogo">
-                <div class="catalogo__producto">
-                    <div class="contenedor__imagen">
-                        <img class="catalogo__producto__imagen" src="img_flores/arg_ramo.png" alt="producto">
+        <div class="background">
+            <section id="trabajos-destacados" class="contenedor">
+                <h2 class="titulo">Catálogo <i class="fa-solid fa-heart"></i></h2>
+                <h3 class="titulo__h3">Trabajos destacados</h3>
+                <div class="catalogo">
+                    <div class="catalogo__producto">
+                        <div class="contenedor__imagen">
+                            <img class="catalogo__producto__imagen" src="img_flores/arg_ramo.png" alt="producto">
+                        </div>
+                        <h4>Ramo Seleccion Argentina</h4>
                     </div>
-                    <h4>Ramo Seleccion Argentina</h4>
+                    <div class="catalogo__producto">
+                        <img class="catalogo__producto__imagen" src="img_flores/cr7.jpg" alt="producto">
+                        <h4>Ramo cr7</h4>
+                    </div>
+                    <div class="catalogo__producto">
+                        <img class="catalogo__producto__imagen" src="img_flores/spiderman.jpg" alt="producto">
+                        <h4>Ramo de Spiderman</h4>
+                    </div>
+                    <div class="catalogo__producto">
+                        <img class="catalogo__producto__imagen" src="img_flores/princesa_sapo.jpg" alt="producto">
+                        <h4>Ramo princesa y sapo</h4>
+                    </div>
                 </div>
-                <div class="catalogo__producto">
-                    <img class="catalogo__producto__imagen" src="img_flores/cr7.jpg" alt="producto">
-                    <h4>Ramo cr7</h4>
-                </div>
-                <div class="catalogo__producto">
-                    <img class="catalogo__producto__imagen" src="img_flores/spiderman.jpg" alt="producto">
-                    <h4>Ramo de Spiderman</h4>
-                </div>
-                <div class="catalogo__producto">
-                    <img class="catalogo__producto__imagen" src="img_flores/princesa_sapo.jpg" alt="producto">
-                    <h4>Ramo princesa y sapo</h4>
-                </div>
-            </div>
-            <div class="ver__catalogo">
-                <a class="catalogo__boton" href="catalogo.html">Ver Catalogo completo <img class="catalogo__boton__img"
-                        src="img/flor.png" alt=""></i>
-                </a>
+                <div class="ver__catalogo">
+                    <a class="catalogo__boton" href="catalogo.html">Ver Catalogo completo <img
+                            class="catalogo__boton__img" src="img/flor.png" alt=""></i>
+                    </a>
 
-            </div>
-        </section>
-        <!-- * Galeria de imagenes -->
-        <section class="contenedor"></section>
+                </div>
+            </section>
+            <!-- * Galeria de imagenes -->
+            <section class="contenedor ">
+                <h2 class="titulo__seccion">Galeria de imagenes</h2>
+                <div class="galeria">
+                    <img src="img_flores/ramo_rosado.jpg" alt="galeria-imagen" class="galeria__imagen uno">
+                    <img src="img_flores/arg_ramo.png" alt="galeria-imagen" class="galeria__imagen dos">
+                    <img src="img_flores/cr7.jpg" alt="galeria-imagen" class="galeria__imagen tres">
+                    <img src="img_flores/ramo_morado.jpg" alt="galeria-imagen" class="galeria__imagen cuatro">
+                    <img src="img_flores/spiderman.jpg" alt="galeria-imagen" class="galeria__imagen cinco">
+                    <img src="img_flores/boca.jpg" alt="galeria-imagen" class="galeria__imagen seis">
+                    <img src="img_flores/egresado.jpg" alt="galeria-imagen" class="galeria__imagen siete">
+                </div>
+            </section>
+        </div>
         <!-- * Comentarios -->
-         <section class="contenedor"></section>
+        <section class="contenedor"></section>
     </main>
     <footer></footer>
 
