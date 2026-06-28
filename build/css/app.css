@@ -667,6 +667,7 @@ img {
 }
 .perfil .perfil__info .perfil__info-parrafo {
   margin: 0;
+  line-height: 2;
 }
 
 .perfil__detalles {
@@ -905,6 +906,70 @@ trabajos realizados y galeria */
     grid-column: unset;
     grid-row: unset;
   }
+}
+
+.footer {
+  background-color: #F3D8DD;
+  padding: 2rem 0;
+}
+.footer .footer__section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 768px) {
+  .footer .footer__section {
+    flex-direction: row;
+    gap: 5rem;
+  }
+}
+.footer .footer__section .idea {
+  align-self: center;
+}
+.footer .footer__section .idea .idea__h3 {
+  color: #d66f7e;
+}
+.footer .footer__section .idea .idea__titulo {
+  font-size: 3rem;
+}
+.footer .footer__section .idea p {
+  line-height: 2;
+}
+
+.contactame h2 {
+  font-size: 3rem;
+}
+.contactame .contactame__redes .red {
+  background-color: #F8F1EB;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 1rem 1rem 3rem #000;
+}
+.contactame .contactame__redes .red a:hover {
+  cursor: pointer;
+}
+
+.footer__enlace {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.footer__enlace svg {
+  margin-left: auto;
+}
+
+.footer__icono {
+  height: 3rem;
+}
+
+.footer__parrafo {
+  text-align: center;
+  display: block;
+  background-color: #638f63;
+  color: #F8F1EB;
+  font-size: 1.8rem;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=app.css.map */
