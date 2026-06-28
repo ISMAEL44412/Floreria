@@ -6,3 +6,15 @@
         color: v.$rosa-principal !important;
     }
 }
+
+.titulo__seccion {
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    font-family: v.$elegante;
+    font-size: 3rem;
+
+    @include m.tablet {
+        font-size: 4rem;
+    }
+}
