@@ -39,7 +39,7 @@
             gap: 0;
         }
 
-        a:not(.boton) {
+        .enlace {
             color: v.$texto;
             &:hover {
                 color: adjust-color(v.$rosa-principal, $lightness: -10%);
