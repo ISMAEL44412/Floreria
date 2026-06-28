@@ -1,0 +1,75 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.footer {
+    background-color: v.$rosa-claro;
+    padding: 2rem 0;
+
+    .footer__section {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        @include m.tablet {
+            flex-direction: row;
+            gap: 5rem;
+        }
+        
+
+        .idea {
+            align-self: center;
+            .idea__h3 {
+                color: v.$rosa-oscuro;
+            }
+
+            .idea__titulo {
+                font-size: 3rem;
+            }
+            p {
+                line-height: 2;
+            }
+        }
+
+        
+    }
+    
+    
+}
+.contactame {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .contactame__redes {
+        .red {
+            background-color: v.$crema;
+            border-radius: .5rem;
+            padding: 1rem;
+            margin: 1rem 0;
+            box-shadow: 1rem 1rem 3rem v.$negro;
+            a:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+.footer__enlace {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    svg {
+        margin-left: auto;
+    }
+}
+.footer__icono {
+    height: 3rem;
+}
+
+.footer__parrafo {
+    text-align: center;
+    display: block;
+    background-color: v.$verdeSuave;
+    color: v.$crema;
+    font-size: 1.8rem;
+    padding: 2rem;
+}
