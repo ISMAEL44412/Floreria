@@ -1,0 +1,26 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.separador {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: center;
+    @include m.telefono {
+        justify-content: start;
+    }
+    align-items: center;
+    gap: 1rem;
+
+    span {
+        content: "";
+        display: block;
+        width: 15rem;
+        height: 0.3rem;
+        background-color: v.$rosa-principal;
+
+    }
+
+    svg {
+        color: v.$rosa-principal;
+    }
+}

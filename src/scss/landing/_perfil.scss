@@ -1,0 +1,146 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.perfil {
+    background: linear-gradient(90deg,
+            #FBF7F2 0%,
+            #F5F0EA 50%,
+            #EEE6DB 100%);
+    height: 60rem;
+
+    @include m.tablet {
+        height: 40rem;
+    }
+    @include m.desktop {
+        height: 30rem;
+    }
+
+    .perfil__contenedor {
+
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        @include m.tablet {
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @include m.desktop {
+            grid-template-columns: 1fr 1fr 2fr;
+        }
+    }
+
+    .perfil__imagen {
+        height: 100%;
+
+        img {
+            height: 100%;
+            width: 25rem;
+            border-radius: 50%;
+        }
+    }
+
+    .perfil__info {
+        width: 100%;
+
+        h2 {
+            font-size: 2rem;
+            margin: 2rem 0 0 0;
+
+            @include m.tablet {
+                font-size: 4rem;
+            }
+
+            span {
+                font-family: "Great Vibes";
+                font-size: 3rem;
+                color: v.$rosa-principal;
+
+                svg {
+                    font-size: 2rem;
+
+                }
+
+                @include m.tablet {
+                    font-size: 4rem;
+
+                    svg {
+                        font-size: 3rem;
+                    }
+                }
+
+            }
+        }
+
+        .perfil__info-parrafo {
+            margin: 0;
+        }
+    }
+}
+
+.perfil__detalles {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @include m.desktop {
+        display: flex;
+        grid-row: 1 / 3;
+        grid-column: 3 / 4;
+    }
+
+    .perfil__detalle {
+        margin: 2rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0 1rem;
+        gap: 1rem;
+        border-right: .2rem solid #0000004d;
+
+        &:nth-child(even) {
+            border: none;
+        }
+
+        @include m.tablet {
+            
+            &:nth-child(even) {
+                border-right: .2rem solid #0000004d;
+            }
+            
+            &:nth-child(4) {
+                border-right: none;
+            }
+        }
+        @include m.desktop {
+            &:nth-child(1) {
+                border-left: .2px solid #0000004d;
+            }
+        }
+
+
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
+
+        .perfil__detalle-primero {
+            text-align: left;
+        }
+    }
+
+    .perfil__detalles-icono {
+        height: 5rem;
+    }
+}

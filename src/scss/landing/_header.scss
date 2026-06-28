@@ -1,0 +1,52 @@
+@use '../base/mixins' as m;
+@use '../base/variables' as v;
+
+
+@use 'sass:color';
+
+.header {
+    background-color: v.$crema;
+
+}
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    @include m.desktop {
+        height: 15rem;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+
+    }
+
+
+    .navegacion__imagen {
+        height: 15rem;
+    }
+    .navegacion__enlaces {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        @include m.tablet {
+            width: 100%;
+            justify-content: space-around;
+            flex-direction: row;
+            gap: 0;
+        }
+
+        a:not(.boton) {
+            color: v.$texto;
+            &:hover {
+                color: adjust-color(v.$rosa-principal, $lightness: -10%);
+            }
+        }
+    }
+}
+.enlace__contactame  {
+    @include m.boton(v.$rosa-principal, white);
+}

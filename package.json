@@ -1,0 +1,15 @@
+{
+  "name": "portafolio-juli",
+  "version": "1.0.0",
+  "description": "Portafolio Juli",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch src/scss:build/css"
+  },
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}

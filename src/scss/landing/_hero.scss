@@ -1,0 +1,96 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.hero {
+    padding-top: 2rem;
+    background: linear-gradient(90deg,
+            #fef8ff 0%,
+            #fff2e6 45%,
+            #ffe1e5 75%,
+            #ffe7eb 100%);
+    display: flex;
+    flex-direction: column;
+
+    @include m.tablet {
+        padding-top: 0;
+        height: 55rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero__contenido {
+
+        .hero__texto {
+            background-color: v.$rosa-suave;
+            color: v.$rosa-principal;
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 1rem;
+        }
+
+        .hero__heading {
+            font-size: 5rem;
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+            margin: 1rem 0;
+
+            span {
+                color: v.$rosa-principal;
+            }
+        }
+    }
+
+    .hero__imagen {
+        @include m.tablet {
+            height: 55rem;
+            grid-column: 2;
+            img {
+                height: 100%;
+                width: 80%;
+            }
+        }
+
+    }
+
+}
+
+.hero__acciones {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+
+    .acciones__contactame {
+        @include m.boton(v.$crema, v.$verde);
+        padding: 1.5rem 2rem;
+
+        @include m.tablet {
+            padding: 1.5rem 4rem;
+        }
+
+        border: 1px solid v.$verde;
+
+        &:hover {
+            background-color: adjust-color(v.$verde, $lightness: -20%);
+            color: v.$blanco;
+        }
+    }
+
+    .acciones__catalogo {
+        @include m.boton(v.$rosa-principal, v.$blanco);
+        padding: 1.5rem 2rem;
+
+        @include m.tablet {
+            padding: 1.5rem 4rem;
+        }
+
+        display: inline-block;
+    }
+}
+
+.hero__parrafo {
+    line-height: 2;
+}
