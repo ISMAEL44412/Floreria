@@ -771,9 +771,7 @@ trabajos realizados y galeria */
   overflow: hidden;
   background-color: #F8F1EB;
   padding-bottom: 2rem;
-  transition: transform 1s;
-  transition: box-shadow 0.3s;
-  transition: color 0.3s;
+  transition: transform 1s, box-shadow 0.3s, color 0.3s;
 }
 .catalogo .catalogo__producto:hover {
   box-shadow: 0 0 8rem #E88C9A;

@@ -38,9 +38,10 @@
         overflow: hidden;
         background-color: v.$crema;
         padding-bottom: 2rem;
-        transition: transform 1s;
-        transition: box-shadow .3s;
-        transition: color .3s;
+        transition: transform 1s,
+                    box-shadow .3s,
+                    color .3s;
+
         &:hover {
             box-shadow: 0 0 8rem v.$rosa-principal;
             border: .5px solid v.$rosa-principal;
