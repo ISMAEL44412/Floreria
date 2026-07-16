@@ -1,9 +1,9 @@
+
 const submit = document.querySelector("form");
 submit.addEventListener("submit", function (e) {
   let usuario = document.getElementById("email").value.trim();
   let contraseña = document.getElementById("password").value.trim();
 
-  e.preventDefault();
 
   let mensaje = "";
   if ((usuario == "") || (contraseña == "")) {
@@ -11,6 +11,7 @@ submit.addEventListener("submit", function (e) {
   }
 
   if (mensaje !== "") {
+    e.preventDefault();
     const formulario = document.querySelector('.formulario');
     const botonSubmit = document.querySelector('.formulario__submit');
 
