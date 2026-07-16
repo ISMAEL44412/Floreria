@@ -32,7 +32,7 @@ if($_SERVER["REQUEST_METHOD"]=== "POST") {
         <form class="formulario" method="post">
             <div class="formulario__campo">
                 <label for="email">Email</label>
-                <input id="email" name="email" type="text" placeholder="Tú email">
+                <input id="email" name="email" type="email" placeholder="Tú email">
             </div>
             <div class="formulario__campo">
                 <label for="password">Tu contraseña</label>
