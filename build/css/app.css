@@ -1033,7 +1033,10 @@ trabajos realizados y galeria */
 
 .login {
   height: 100vh;
-  background-color: #F3D8DD;
+  background-image: url("../../../background-login.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 @media (min-width: 768px) {
   .login {
@@ -1059,10 +1062,58 @@ trabajos realizados y galeria */
   font-family: "Poppins", sans-serif;
 }
 .login .login__contenedor h1 {
-  font-size: 5rem;
+  font-size: 6rem;
+}
+@media (min-width: 768px) {
+  .login .login__contenedor h1 {
+    font-size: 8rem;
+  }
+}
+.login .login__contenedor h1 {
   font-family: "Great Vibes";
   padding: 2rem 0;
   margin: 0;
+}
+.login .login__contenedor .volver {
+  background-color: #E88C9A;
+  padding: 1.5rem 4rem;
+  color: #000;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5rem 0;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .login .login__contenedor .volver {
+    width: auto;
+  }
+}
+.login .login__contenedor .volver:hover {
+  background-color: rgb(215, 55, 79.347826087);
+  cursor: pointer;
+}
+.login .login__contenedor .volver:hover {
+  color: #fff;
+}
+.login .login__contenedor .volver {
+  margin: 0;
+  margin-left: 2rem;
+  padding: 1rem;
+  width: auto;
+  align-self: flex-start;
+  font-weight: normal;
+}
+.login .login__contenedor .volver svg {
+  width: 2rem;
 }
 
 .formulario {
@@ -1077,7 +1128,7 @@ trabajos realizados y galeria */
 }
 .formulario .formulario__campo label,
 .formulario .formulario__campo input {
-  color: #d66f7e;
+  color: #000;
 }
 .formulario .formulario__campo label {
   font-size: 2.2rem;
@@ -1091,7 +1142,7 @@ trabajos realizados y galeria */
 }
 
 .formulario__submit {
-  width: 100%;
+  width: auto;
   background-color: #E88C9A;
   text-decoration: none;
   padding: 2rem;
@@ -1100,12 +1151,12 @@ trabajos realizados y galeria */
 }
 .formulario__submit:hover {
   cursor: pointer;
-  background-color: #f18394;
+  background-color: rgb(223.5, 97.5, 116.6739130435);
   color: #fff;
 }
 
 .mensaje {
-  background-color: rgba(255, 30, 30, 0.807);
+  background-color: rgba(255, 87, 87, 0.89);
   margin-bottom: 1rem;
   padding: 0.1rem;
   border-radius: 0.5rem;
@@ -1120,6 +1171,22 @@ trabajos realizados y galeria */
 
 .oculto {
   opacity: 0;
+}
+
+.acciones {
+  align-self: center;
+}
+@media (min-width: 768px) {
+  .acciones {
+    align-self: flex-end;
+  }
+}
+.acciones a {
+  color: #000;
+  text-decoration: none;
+}
+.acciones a:hover {
+  color: rgb(223.5, 97.5, 116.6739130435);
 }
 
 /*# sourceMappingURL=app.css.map */

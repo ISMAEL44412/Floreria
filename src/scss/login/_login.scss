@@ -1,10 +1,14 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
+@use 'sass:color';
+
 .login {
   height: 100vh;
-  background-color: v.$rosa-claro;
-
+  background-image: url('../../../background-login.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   @include m.tablet {
     display: flex;
     justify-content: center;
@@ -24,10 +28,32 @@
     font-family: v.$normal;
 
     h1 {
-      font-size: 5rem;
+
+      font-size: 6rem;
+      @include m.tablet {
+        font-size: 8rem;
+      }
       font-family: v.$cursiva;
       padding: 2rem 0;
       margin: 0;
+    }
+
+    .volver {
+
+      @include m.boton(v.$rosa-principal, v.$negro);
+      &:hover {
+        color: v.$blanco;
+      }
+      margin: 0;
+      margin-left: 2rem;
+      padding: 1rem;
+      width: auto;
+      align-self: flex-start;
+      font-weight: normal;
+
+      svg {
+        width: 2rem;
+      }
     }
   }
 }
@@ -44,7 +70,7 @@
 
     label,
     input {
-      color: v.$rosa-oscuro;
+      color: v.$negro;
     }
     label {
       font-size: 2.2rem;
@@ -60,7 +86,7 @@
 }
 
 .formulario__submit {
-  width: 100%;
+  width: auto;
   background-color: v.$rosa-principal;
   text-decoration: none;
   padding: 2rem;
@@ -68,14 +94,14 @@
   border: none;
   &:hover {
     cursor: pointer;
-    background-color: v.$rosa-hover;
+    background-color: adjust-color(v.$rosa-principal, $lightness: -10%);
     color: v.$blanco;
   }
 }
 
 
 .mensaje {
-  background-color: rgba(255, 30, 30, 0.807);
+  background-color: rgba(255, 87, 87, 0.89);
   margin-bottom: 1rem;
   padding: .1rem;
   border-radius: .5rem;
@@ -91,4 +117,21 @@
 .oculto {
   opacity: 0;
 
+}
+
+.acciones {
+
+  align-self: center;
+  @include m.tablet {
+    align-self: flex-end;
+  }
+
+  a {
+    color: v.$negro;
+    text-decoration: none;
+
+    &:hover {
+      color:  adjust-color(v.$rosa-principal, $lightness: -10%);
+    }
+  }
 }
