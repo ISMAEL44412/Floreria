@@ -1,8 +1,27 @@
 <?php
 include __DIR__ . '/includes/funciones.php';
+include __DIR__ . '/includes/config/database.php';
 
-if($_SERVER["REQUEST_METHOD"]=== "POST") {
-    header('Location: ./admin/dashboard.php');
+$db = database();
+
+
+$alertas = [];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $query = "SELECT * FROM usuarios WHERE email = '$email'";
+    $resultado = mysqli_query($db, $query);
+    $usuario = mysqli_fetch_assoc($resultado);
+
+    if (!$usuario) {
+        $alertas['error'][] = "Usuario no encontrado";
+    } else {
+        if ($password === $usuario["password"]) {
+            header('Location: ./admin/dashboard.php');
+        } else {
+            $alertas['error'][] = "Contraseña incorrecta";
+        }
+    }
 }
 
 
@@ -11,6 +30,7 @@ if($_SERVER["REQUEST_METHOD"]=== "POST") {
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -29,6 +49,11 @@ if($_SERVER["REQUEST_METHOD"]=== "POST") {
 <body class="login">
     <div class="login__contenedor">
         <h1>Iniciar Sesion</h1>
+        <a href="/index.php" class="volver"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+            </svg>
+            Volver</a>
+
         <form class="formulario" method="post">
             <div class="formulario__campo">
                 <label for="email">Email</label>
@@ -38,11 +63,13 @@ if($_SERVER["REQUEST_METHOD"]=== "POST") {
                 <label for="password">Tu contraseña</label>
                 <input id="password" name="password" type="password" placeholder="Tú contraseña">
             </div>
-
+            
             <input class="formulario__submit" type="submit" value="Iniciar Sesión">
         </form>
+        <div class="acciones">
+            <a href="/olvide.php">¿Olvidaste tu contraseña? Recuperala aquí</a>
+        </div>
     </div>
-
     <script src="src/js/app.js"></script>
 </body>
 
