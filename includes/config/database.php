@@ -1,15 +1,16 @@
 <?php
-
-function database() : mysqli {
-    $database = mysqli_connect("localhost", "root","root", "floreria", 3306);
+require_once __DIR__ . "/../funciones.php";
 
 
-    if(!$database) {
-        echo "Error de conexión: " . mysqli_connect_error();
-        exit;
+function database(): mysqli
+{
+    $database = new mysqli("localhost", "root", "root", "floreria", 3306);
+
+
+    if ($database->connect_errno) {
+        die("Error de conexión: " . $database->connect_error);
     }
+
 
     return $database;
 }
-
-?>

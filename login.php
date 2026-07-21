@@ -1,31 +1,17 @@
 <?php
-include __DIR__ . '/includes/funciones.php';
-include __DIR__ . '/includes/config/database.php';
+require_once __DIR__ . '/includes/funciones.php';
+require_once __DIR__ . '/includes/config/database.php';
 
 $db = database();
 
 
 $alertas = [];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $query = "SELECT * FROM usuarios WHERE email = '$email'";
-    $resultado = mysqli_query($db, $query);
-    $usuario = mysqli_fetch_assoc($resultado);
+    $email = trim($_POST["email"]) ?? '';
+    $password = $_POST["password"] ?? '';
 
-    if (!$usuario) {
-        $alertas['error'][] = "Usuario no encontrado";
-    } else {
-        if ($password === $usuario["password"]) {
-            header('Location: ./admin/dashboard.php');
-        } else {
-            $alertas['error'][] = "Contraseña incorrecta";
-        }
-    }
+
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
