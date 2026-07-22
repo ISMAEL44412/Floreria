@@ -10,7 +10,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email"]) ?? '';
     $password = $_POST["password"] ?? '';
 
+    $stmt = $db->prepare("SELECT * FROM usuarios WHERE email = ?");
 
+    $stmt->bind_param('s', $email);
+
+    $stmt->execute();
+
+    $result = $stmt->get_result();
+    $result = $result->fetch_assoc();
+
+    if($result) {
+        debuguear("Existe usuario");
+    } else {
+        debuguear("No existe usuario");
+    }
 }
 ?>
 
