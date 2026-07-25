@@ -2,9 +2,11 @@
 
 session_start();
 
-if(!$_SESSION) {
-    header("Location: index.php");
-}
+
+// Proteger ruta
+// if(!$_SESSION) {
+//     header("Location: index.php");
+// }
 
 ?>
 <!DOCTYPE html>
