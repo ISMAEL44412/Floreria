@@ -6,6 +6,11 @@ $db = database();
 
 
 $alertas = [];
+// $password = 123456789;
+// $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+// $admin = "INSERT INTO usuarios( nombre, apellido, email, password) VALUES(";
+// $admin .= "'root', 'root', 'correo@correo.com',";
+// $admin .= "'". $passwordHash. "');";
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = trim($_POST["email"]) ?? '';
     $password = $_POST["password"] ?? '';
@@ -19,10 +24,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $result = $stmt->get_result();
     $result = $result->fetch_assoc();
 
-    if($result) {
-        debuguear("Existe usuario");
+    if ($result) {
+        // * Usuario encontrado;
+        $password_verificado = password_verify($password, $result["password"]);
+        if ($password_verificado) {
+            header("Location: /admin/dashboard.php");
+        } else {
+            $alertas[] = "Contraseña incorrecta";
+        }
     } else {
-        debuguear("No existe usuario");
+        $alertas[] = "Usuario incorrecto";
     }
 }
 ?>
@@ -53,6 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </svg>
             Volver</a>
 
+
         <form class="formulario" method="post">
             <div class="formulario__campo">
                 <label for="email">Email</label>
@@ -62,11 +74,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <label for="password">Tu contraseña</label>
                 <input id="password" name="password" type="password" placeholder="Tú contraseña">
             </div>
-            
+            <?php foreach ($alertas as $alerta): ?>
+                <div class="mensaje">
+                    <p>
+                        <?php echo $alerta; ?>
+                    </p>
+                </div>
+            <?php endforeach; ?>
             <input class="formulario__submit" type="submit" value="Iniciar Sesión">
         </form>
         <div class="acciones">
-            <a href="/olvide.php">¿Olvidaste tu contraseña? Recuperala aquí</a>
+            <a href="/olvide.php">Recuperar contraseña</a>
         </div>
     </div>
     <script src="src/js/app.js"></script>
