@@ -2,8 +2,7 @@
 
 $activo = 'index';
 include __DIR__ . "/templates/header.php";
-
-
+require_once __DIR__ . "/includes/funciones.php";
 ?>
 
 <!-- * HERO-->
