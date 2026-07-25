@@ -3,7 +3,7 @@ require_once __DIR__ . '/includes/funciones.php';
 require_once __DIR__ . '/includes/config/database.php';
 
 $db = database();
-
+session_start();
 
 $alertas = [];
 // $password = 123456789;
@@ -28,6 +28,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         // * Usuario encontrado;
         $password_verificado = password_verify($password, $result["password"]);
         if ($password_verificado) {
+            
+            $_SESSION["login"] = true;
+            $_SESSION["user"] = $result["email"];
+            $_SESSION["user_name"] = $result["nombre"];
             header("Location: /admin/dashboard.php");
         } else {
             $alertas[] = "Contraseña incorrecta";
