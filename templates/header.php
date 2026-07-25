@@ -1,3 +1,17 @@
+<?php
+
+require_once __DIR__ . "/../includes/funciones.php";
+session_start();
+
+$loginTrue = false;
+if($_SESSION) {
+    ($_SESSION["login"]===true? $loginTrue=true: $loginTrue=false);
+}
+
+$_SESSION = [];
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -32,11 +46,15 @@
                 <a class="enlace" href="#galeria">Galeria</a>
 
                 <?php }?>
-                <a class="enlace__contactame boton"
-                    href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
-                    <i class="fa-brands fa-whatsapp"></i>
-                    Escribeme
-                </a>
+                <?php if($loginTrue):?>
+                    <a class="enlace__contactame boton" href="/admin/dashboard.php"><i class="fa-solid fa-user-tie"></i> Dashboard</a>
+                <?php else: ?>
+                    <a class="enlace__contactame boton"
+                        href="https://wa.me/5493872154785?text=Hola,%20me%20gustaría%20recibir%20más%20información%20sobre%20sus%20productos.">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Escribeme
+                    </a>
+                <?php endif; ?>
             </div>
         </nav>
     </header>
