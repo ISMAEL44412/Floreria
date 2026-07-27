@@ -1228,5 +1228,12 @@ trabajos realizados y galeria */
   background-color: #E88C9A;
   color: #fff;
 }
+.dashboard .aside__navegacion .cerrar_sesion {
+  background-color: rgb(219.25, 76.25, 98.0108695652);
+  color: #fff;
+}
+.dashboard .aside__navegacion .cerrar_sesion:hover {
+  background-color: rgb(182.5, 36.5, 58.7173913043);
+}
 
 /*# sourceMappingURL=app.css.map */
