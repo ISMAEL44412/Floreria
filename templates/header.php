@@ -3,12 +3,10 @@
 require_once __DIR__ . "/../includes/funciones.php";
 session_start();
 
-$loginTrue = false;
-if($_SESSION) {
-    ($_SESSION["login"]===true? $loginTrue=true: $loginTrue=false);
+$isLogged = false;
+if (!empty($_SESSION)) {
+    $isLogged = true;
 }
-
-$_SESSION = [];
 
 ?>
 
@@ -37,16 +35,16 @@ $_SESSION = [];
                 <img loading="lazy" class="navegacion__imagen" src="img_webp/logo_sin_background.webp" alt="">
             </div>
             <div class="navegacion__enlaces">
-                <a class="enlace <?php if($activo=='index') echo 'activo' ?>" href="index.php">Inicio</a>
-                <a class="enlace <?php if($activo=='catalogo') echo 'activo' ?>" href="catalogo.php">Catálogo</a>
-                <?php if($activo==='index'){?>
-                <a class="enlace" href="#sobre-mi">Sobre mí</a>
-                <a class="enlace" href="#trabajos-destacados">Trabajos</a>
-                <a class="enlace" href="#modelos">Modelos</a>
-                <a class="enlace" href="#galeria">Galeria</a>
+                <a class="enlace <?php if ($activo == 'index') echo 'activo' ?>" href="index.php">Inicio</a>
+                <a class="enlace <?php if ($activo == 'catalogo') echo 'activo' ?>" href="catalogo.php">Catálogo</a>
+                <?php if ($activo === 'index') { ?>
+                    <a class="enlace" href="#sobre-mi">Sobre mí</a>
+                    <a class="enlace" href="#trabajos-destacados">Trabajos</a>
+                    <a class="enlace" href="#modelos">Modelos</a>
+                    <a class="enlace" href="#galeria">Galeria</a>
 
-                <?php }?>
-                <?php if($loginTrue):?>
+                <?php } ?>
+                <?php if ($isLogged): ?>
                     <a class="enlace__contactame boton" href="/admin/dashboard.php"><i class="fa-solid fa-user-tie"></i> Dashboard</a>
                 <?php else: ?>
                     <a class="enlace__contactame boton"
