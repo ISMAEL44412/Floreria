@@ -7,3 +7,11 @@ function debuguear(mixed $variable) {
     echo "</pre>";
     exit;
 }
+
+function isAuth() {
+    session_start();
+    if(empty($_SESSION)) {
+        header("Location: /login.php");
+        exit;
+    } 
+}
