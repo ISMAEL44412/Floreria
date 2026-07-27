@@ -1,13 +1,9 @@
 <?php 
+require_once __DIR__ . '/../includes/funciones.php';
+require_once __DIR__ . '/../includes/config/database.php';
 
-session_start();
 
-
-// Proteger ruta
-// if(!$_SESSION) {
-//     header("Location: index.php");
-// }
-
+isAuth();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -36,7 +32,7 @@ session_start();
             <a href="../index.php">Inicio</a>
             <a href="#">Productos</a>
             <a href="#">Configuración</a>
-            <a href="#">Cerrar Sesión</a>
+            <a href="/logout.php" class="cerrar_sesion">Cerrar Sesión</a>
         </nav>
     </aside>
     <main>
