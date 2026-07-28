@@ -4,6 +4,7 @@ require_once __DIR__ . '/../includes/config/database.php';
 
 
 isAuth();
+$titulo ="Dashboard";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -24,18 +25,5 @@ isAuth();
 </head>
 
 <body class="dashboard">
-    <aside class="aside">
-        <div class="aside__logo">
-            <img loading="lazy" class="navegacion__imagen" src="../img_webp/logo_sin_background.webp" alt="">
-        </div>
-        <nav class="aside__navegacion">
-            <a href="../index.php">Inicio</a>
-            <a href="#">Productos</a>
-            <a href="#">Configuración</a>
-            <a href="/logout.php" class="cerrar_sesion">Cerrar Sesión</a>
-        </nav>
-    </aside>
-    <main>
-     <h1>Titulo</h1>
-    </main>
+    <?php include __DIR__ ."/../templates/aside.php"; ?>
 </body>
