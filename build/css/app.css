@@ -1191,7 +1191,7 @@ trabajos realizados y galeria */
 
 .dashboard {
   display: flex;
-  width: min(90%, 170rem);
+  width: min(100%, 170rem);
 }
 .dashboard .aside {
   background-color: #F7E8EA;
@@ -1234,6 +1234,57 @@ trabajos realizados y galeria */
 }
 .dashboard .aside__navegacion .cerrar_sesion:hover {
   background-color: rgb(182.5, 36.5, 58.7173913043);
+}
+.dashboard__main {
+  margin: 0 2rem;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.dashboard__titulo {
+  text-align: center;
+  display: block;
+}
+
+.dashboard__crear {
+  text-decoration: none;
+  background-color: #E88C9A;
+  padding: 1.5rem 4rem;
+  color: #fff;
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 400;
+  display: inline-block;
+  font-weight: 700;
+  border: none;
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 5rem 0;
+  border-radius: 1rem;
+}
+@media (min-width: 768px) {
+  .dashboard__crear {
+    width: auto;
+  }
+}
+.dashboard__crear:hover {
+  background-color: rgb(215, 55, 79.347826087);
+  cursor: pointer;
+}
+.dashboard__crear {
+  margin: 2rem 0;
+  display: inline-block;
+}
+
+.tabla {
+  width: 100%;
+}
+.tabla th, .tabla td {
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */

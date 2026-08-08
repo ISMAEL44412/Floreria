@@ -4,7 +4,7 @@
 
 .dashboard {
     display: flex;
-    width: min(90%, 170rem);
+    width: min(100%, 170rem);
     .aside {
         background-color: v.$rosa-suave;
         height: 100vh;
@@ -52,4 +52,22 @@
             }
         }
     }
+
+    &__main {
+        margin: 0 2rem;
+        width: 100%;
+        height: 100vh;
+        overflow: scroll;
+    }
 }
+.dashboard__titulo {
+    text-align: center;
+    display: block;
+}
+.dashboard__crear {
+    text-decoration: none;
+    @include m.boton(v.$rosa-principal, v.$blanco);
+    margin: 2rem 0;
+    display: inline-block;
+}
+
