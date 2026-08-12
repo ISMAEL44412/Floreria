@@ -1,0 +1,50 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+@use "sass:color";
+
+.aside {
+  background-color: v.$rosa-suave;
+  height: 100vh;
+
+  &__logo img {
+    height: 15rem;
+  }
+  &__navegacion {
+    &::before {
+      content: "";
+      display: block;
+      height: 0.5rem;
+      border-radius: 0.5rem;
+      background-color: v.$rosa-principal;
+      width: 90%;
+      font-size: 2rem;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    a {
+      color: v.$negro;
+      padding: 2rem 0;
+      display: block;
+      border-radius: 0.5rem;
+      width: 90%;
+      text-align: center;
+      &:hover {
+        background-color: v.$rosa-principal;
+        color: v.$blanco;
+      }
+    }
+  }
+}
+
+.cerrar_sesion {
+  background-color: adjust-color(v.$rosa-principal, $lightness: -15%);
+  color: v.$blanco !important;
+
+  &:hover {
+    background-color: adjust-color(v.$rosa-principal, $lightness: -30%);
+  }
+}

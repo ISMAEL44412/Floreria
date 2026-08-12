@@ -1,11 +1,13 @@
-@use '../base/variables' as v;
-@use '../base/mixins' as m;
-@use 'sass:color';
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+@use "sass:color";
+
 
 .tabla {
-    width: 100%;
+  width: 100%;
 
-    th, td {
-        text-align: center;
-    }
+  th,
+  td {
+    text-align: center;
+  }
 }
